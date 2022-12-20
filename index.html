@@ -29,10 +29,12 @@
             <button class="descriptografar" type="button">Descriptografar</button>
         </section>
         <aside class="container-retangulo">
-            <img class="imagem-menino" src="assets/img/Vetor.png" alt="nenhuma mensagem encontrada">
-            <div class="container-paragrafo">
-                <p class="paragrafo1">Nenhuma mensagem encontrada</p>
-                <p class="paragrafo2">Digite um texto que você deseja criptografar ou descriptografar</p>
+            <div id="container-mensagem-erro">
+                <img class="imagem-menino" src="assets/img/Vetor.png" alt="nenhuma mensagem encontrada">
+                <div class="container-paragrafo" onclick="visibilityNone()">
+                    <p class="paragrafo1">Nenhuma mensagem encontrada</p>
+                    <p class="paragrafo2">Digite um texto que você deseja criptografar ou descriptografar</p>
+                </div>
             </div>
         </aside>
     </main>

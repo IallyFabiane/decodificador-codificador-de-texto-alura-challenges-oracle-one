@@ -1,8 +1,9 @@
 let frase =  document.querySelector(".texto");
+let texto = document.querySelector(".container-texto");
+let containerRetangulo = document.querySelector(".container-retangulo");
 
 function criptografar (frase) {
-    let texto = frase.value.split("");
-    //console.log(texto);
+    let texto = frase ? frase.value.split(""): "";
 
     texto.forEach((element, i) => {
         if (element == "a") {
@@ -19,20 +20,35 @@ function criptografar (frase) {
 
     });
     
-    //console.log(texto.join(""));
     return texto.join("");
 }
 
 function exibirCriptografia() {
-   let frase =  document.querySelector(".texto");
-   let texto = document.querySelector(".container-texto");
-   let containerRetangulo = document.querySelector(".container-retangulo");
    texto.innerHTML = criptografar(frase);
    mostraMensagemDeErro(true);
    containerRetangulo.innerHTML = criptografar(frase);
 }
 
+function descriptografar (frase) {
+    let caracteres = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
+    let texto = frase ? frase.value : "";
+
+    for (let i = 0; i < caracteres.length; i++) {
+        if (texto.includes(caracteres[i][1])) {
+            texto = texto.replace(caracteres[i][1], caracteres[i][0]);
+        }
+    }
+    return texto;
+}
+
+function exibirTextoDescriptografado () {
+    texto.innerHTML = descriptografar(frase); 
+    mostraMensagemDeErro(true);
+    containerRetangulo.innerHTML = descriptografar(frase);
+}
+
 function mostraMensagemDeErro (bool) {
-    document.getElementById("container-mensagem-erro").style.display = "none";
+   let mensagem =  document.getElementById("container-mensagem-erro");
+   mensagem ? mensagem.style.display = "none" : "";
 };
 

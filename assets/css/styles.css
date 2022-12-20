@@ -48,7 +48,7 @@ body {
     flex-direction: row;
     align-items: flex-start;
     padding: 24px;
-    margin: 10px;
+    margin: 20px;
     gap: 8px;
 }
 
@@ -61,7 +61,7 @@ body {
     position: absolute;
     width: 252px;
     height: 18px;
-    left: 49px;
+    left: 55px;
     top: 800px;
     font-family: 'Inter';
     font-style: normal;
@@ -103,7 +103,7 @@ body {
     height: 944px;
     left: 1000px;
     top: 40px;
-    background: #FFFFFF;
+    background: #fff;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
     display: flex;
@@ -159,4 +159,35 @@ body {
     order: 1;
     align-self: stretch;
     flex-grow: 0;
+}
+
+.rodape {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.rodape-paragrafo {
+    color: hsl(213, 84%, 24%);
+    margin: 0;
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.rodape-paragrafo a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #0A3871;
+}
+
+.rodape-paragrafo a:hover {
+    cursor: pointer;
+    color: #609ED4;
 }

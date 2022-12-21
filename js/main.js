@@ -6,7 +6,7 @@ let botaoDescriptografar = document.querySelector(".descriptografar");
 
 frase.addEventListener("focus", function mensagemDeValidacao(frase) {
     let mensagem =  document.getElementById("container-mensagem-validacao");
-    if (/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/.test(frase.value)) {
+    if (/^[A-Z-a-z(áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ) ]+$/.test(frase.value)) {
         mensagem.style.visibility = "visible";
     };
     
@@ -21,7 +21,6 @@ botaoDescriptografar.addEventListener("click", function mensagemDeValidacao() {
     let mensagem =  document.getElementById("container-mensagem-validacao");
     mensagem.style.visibility = "hidden";
 });
-
 
 function criptografar (frase) {
     let texto = frase ? frase.value.split(""): "";
@@ -66,7 +65,7 @@ function exibirTextoDescriptografado () {
     texto.innerHTML = descriptografar(frase); 
     mostraMensagemDeErro(true);
     containerRetangulo.innerHTML = descriptografar(frase);
-}
+};
 
 function mostraMensagemDeErro (bool) {
    let mensagem =  document.getElementById("container-mensagem-erro");

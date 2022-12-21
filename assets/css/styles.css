@@ -89,10 +89,17 @@ body {
     width: 328px;
     height: 67px;
     border-radius: 24px;
+    border: none;
     color: #fff;
     flex: none;
     order: 0;
     flex-grow: 0;
+}
+.criptografar:hover {
+    background: #D8DFE8;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    cursor: pointer;
 }
 
 .descriptografar {
@@ -100,12 +107,18 @@ body {
     box-sizing: border-box;
     width: 328px;
     height: 67px;
-    border: 1px solid #0A3871;
+    border: none;
     color:  #0A3871;
     border-radius: 24px;
     flex: none;
     order: 1;
     flex-grow: 0;
+}
+
+.descriptografar:hover {
+    background: #495057;
+    color: #fff;
+    cursor: pointer;
 }
 
 .container-retangulo {
@@ -186,11 +199,11 @@ body {
     height: 100px;
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .rodape-paragrafo {
-    color: hsl(213, 84%, 24%);
-    margin: 0;
+    color: #495057;
     text-align: left;
     padding-top: 50px;
     padding-left: 50px;

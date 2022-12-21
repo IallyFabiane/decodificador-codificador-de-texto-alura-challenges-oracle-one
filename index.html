@@ -15,18 +15,18 @@
     </header>
     <main class="principal">
         <section class="container-texto">
-            <input class="texto" type="text" placeholder="Digite seu texto">
+            <textarea class="texto" placeholder="Digite seu texto" rows="5" cols="30" maxlength="32"></textarea>
         </section>
         <div class="container-void">
 
         </div>
         <section class="container-botoes">
-            <div class="container-mensagem">
+            <div id="container-mensagem-validacao">
                 <img src="assets/img/Exclamacao.svg" alt="exclamação"> 
                 <span>Apenas letras minúsculas e sem acento.</span>
             </div>
-            <button class="criptografar" type="button" onclick="exibirCriptografia()">Criptografar</button>
-            <button class="descriptografar" type="button" onclick="exibirTextoDescriptografado()">Descriptografar</button>
+            <button class="criptografar" type="submit" onclick="exibirCriptografia()">Criptografar</button>
+            <button class="descriptografar" type="submit" onclick="exibirTextoDescriptografado()">Descriptografar</button>
         </section>
         <aside class="container-retangulo">
             <div id="container-mensagem-erro">

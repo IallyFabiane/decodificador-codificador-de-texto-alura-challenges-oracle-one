@@ -1,6 +1,27 @@
 let frase =  document.querySelector(".texto");
 let texto = document.querySelector(".container-texto");
 let containerRetangulo = document.querySelector(".container-retangulo");
+let botaoCriptografar = document.querySelector(".criptografar");
+let botaoDescriptografar = document.querySelector(".descriptografar");
+
+frase.addEventListener("focus", function mensagemDeValidacao(frase) {
+    let mensagem =  document.getElementById("container-mensagem-validacao");
+    if (/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/.test(frase.value)) {
+        mensagem.style.visibility = "visible";
+    };
+    
+});
+
+botaoCriptografar.addEventListener("click", function mensagemDeValidacao() {
+    let mensagem =  document.getElementById("container-mensagem-validacao");
+    mensagem.style.visibility = "hidden";
+});
+
+botaoDescriptografar.addEventListener("click", function mensagemDeValidacao() {
+    let mensagem =  document.getElementById("container-mensagem-validacao");
+    mensagem.style.visibility = "hidden";
+});
+
 
 function criptografar (frase) {
     let texto = frase ? frase.value.split(""): "";
@@ -21,13 +42,13 @@ function criptografar (frase) {
     });
     
     return texto.join("");
-}
+};
 
 function exibirCriptografia() {
    texto.innerHTML = criptografar(frase);
    mostraMensagemDeErro(true);
    containerRetangulo.innerHTML = criptografar(frase);
-}
+};
 
 function descriptografar (frase) {
     let caracteres = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
@@ -39,7 +60,7 @@ function descriptografar (frase) {
         }
     }
     return texto;
-}
+};
 
 function exibirTextoDescriptografado () {
     texto.innerHTML = descriptografar(frase); 

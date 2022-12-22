@@ -12,6 +12,10 @@ body {
     padding: 10px;
 }
 
+.logo:hover {
+    filter: drop-shadow(2px 2px 2px #609ED4);
+}
+
 .principal {
     position: relative;
 }
@@ -105,6 +109,7 @@ body {
     color: #0A3871;
     cursor: pointer;
     box-shadow: 1px 1px 1px 1px #495057;
+    font-weight: bold;
 }
 
 .descriptografar {
@@ -125,6 +130,7 @@ body {
     color: #fff;
     cursor: pointer;
     box-shadow: 1px 1px 1px 1px #343A40;
+    font-weight: bold;
 }
 
 .container-retangulo {
@@ -232,6 +238,7 @@ body {
 .rodape-paragrafo a:hover {
     cursor: pointer;
     color: #609ED4;
+    transition: 300ms all ease-in-out;
 }
 
 ::-webkit-input-placeholder {

@@ -6,7 +6,7 @@ let botaoDescriptografar = document.querySelector(".descriptografar");
 
 frase.addEventListener("focus", function mensagemDeValidacao(frase) {
     let mensagem =  document.getElementById("container-mensagem-validacao");
-    if (/^[A-Z-a-z(áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ) ]+$/.test(frase.value)) {
+    if (/^[A-Z(áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ) ]?$/.test(frase.value)) {
         mensagem.style.visibility = "visible";
     };
     

@@ -16,15 +16,15 @@
     </header>
     <main class="principal">
         <section class="container-texto">
-            <textarea class="texto" placeholder="Digite seu texto" rows="5" cols="30" maxlength="20"></textarea>
+            <textarea class="texto" placeholder="Digite seu texto" rows="5" cols="30" maxlength="100" wrap="hard"></textarea>
         </section>
         <div class="container-void">
 
         </div>
         <section class="container-botoes">
-            <div id="container-mensagem-validacao">
+            <div class="container-mensagem-validacao">
                 <img src="assets/img/Exclamacao.svg" alt="exclamação"> 
-                <span>Apenas letras minúsculas e sem acento.</span>
+                <span>Apenas letras minúsculas e sem acento. Limite de 140 caracteres.</span>
             </div>
             <button class="criptografar" type="submit" onclick="exibirCriptografia()">Criptografar</button>
             <button class="descriptografar" type="submit" onclick="exibirTextoDescriptografado()">Descriptografar</button>

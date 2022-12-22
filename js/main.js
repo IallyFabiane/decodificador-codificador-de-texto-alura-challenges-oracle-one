@@ -3,22 +3,16 @@ let texto = document.querySelector(".container-texto");
 let containerRetangulo = document.querySelector(".container-retangulo");
 let botaoCriptografar = document.querySelector(".criptografar");
 let botaoDescriptografar = document.querySelector(".descriptografar");
-
-frase.addEventListener("focus", function mensagemDeValidacao(frase) {
-    let mensagem =  document.getElementById("container-mensagem-validacao");
-    if (/^[A-Z(áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ) ]?$/.test(frase.value)) {
-        mensagem.style.visibility = "visible";
-    };
-    
-});
+let mensagem =  document.querySelector(".container-mensagem-validacao");
+mensagem.style.visibility = "hidden";
 
 botaoCriptografar.addEventListener("click", function mensagemDeValidacao() {
-    let mensagem =  document.getElementById("container-mensagem-validacao");
-    mensagem.style.visibility = "hidden";
+    if (!/^[A-Z(áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ) ]?$/.test(frase.value)) {
+        mensagem.style.visibility = "visible";
+     };
 });
 
 botaoDescriptografar.addEventListener("click", function mensagemDeValidacao() {
-    let mensagem =  document.getElementById("container-mensagem-validacao");
     mensagem.style.visibility = "hidden";
 });
 
@@ -71,4 +65,5 @@ function mostraMensagemDeErro (bool) {
    let mensagem =  document.getElementById("container-mensagem-erro");
    mensagem ? mensagem.style.display = "none" : "";
 };
+
 

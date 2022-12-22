@@ -7,7 +7,10 @@ let mensagem =  document.querySelector(".container-mensagem-validacao");
 mensagem.style.visibility = "hidden";
 
 botaoCriptografar.addEventListener("click", function mensagemDeValidacao() {
-    if (!/^[A-Z(áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ) ]?$/.test(frase.value)) {
+    if (/^[a-z][^(áàâãéèêíïóôõöúç)]+$/.test(frase.value)) {
+        mensagem.style.visibility = "hidden";
+    }
+    else if (!/^[A-Z(áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ) ]+$/.test(frase.value)) {
         mensagem.style.visibility = "visible";
      };
 });
@@ -65,5 +68,3 @@ function mostraMensagemDeErro (bool) {
    let mensagem =  document.getElementById("container-mensagem-erro");
    mensagem ? mensagem.style.display = "none" : "";
 };
-
-

@@ -10,7 +10,7 @@ botaoCriptografar.addEventListener("click", function mensagemDeValidacao() {
     if (/^[a-z][^(áàâãéèêíïóôõöúç)]+$/.test(frase.value)) {
         mensagem.style.visibility = "hidden";
     }
-    else if (!/^[A-Z(áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ) ]+$/.test(frase.value)) {
+    else if (/^[A-Z(áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ) ]+$/.test(frase.value)) {
         mensagem.style.visibility = "visible";
      };
 });

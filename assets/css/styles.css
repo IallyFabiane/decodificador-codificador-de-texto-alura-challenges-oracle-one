@@ -1,54 +1,102 @@
-body {
-    background: #F3F5FC;
+/*Paleta de Cores*/
+:root {
+    --dark-blue-200: #356EA9;
+    --dark-blue-400: #072B61;
+    --gray-100: #CED4DA;
+    --gray-200: #ADB5BD;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+    --light-blue-200: #EFF1FA;
+    --light-blue-400: #AAB2D5;
+    --white: #FFF;
 }
+
+body {
+    overflow-x: hidden;
+}
+
+/*Header*/
 
 .cabecalho {
     display: flex;
     align-items: flex-start;
-    margin: 20px;
+    width: 100%;
+    height: 3rem;
+    margin: 0;
+    padding: 1rem ;
+    background-color: var(--light-blue-200);
 }
 
-.logo {
-    padding: 10px;
+.logo-cabecalho-1 {
+    width: 90px;
+    height: 45px;
 }
 
-.logo:hover {
-    filter: drop-shadow(2px 2px 2px #609ED4);
+.logo-cabecalho-1:hover {
+    filter: drop-shadow(2px 2px 3px var(--dark-blue-200));
+}
+
+.logo-cabecalho-2 {
+    width: 100px;
+    height: 50px;
+}
+
+.logo-cabecalho-2:hover {
+    filter: drop-shadow(2px 2px 3px var(--gray-200));
+}
+
+.divisor {
+    width: 1px;
+    height: 50px;
+    margin-right: 30px;
+    background-color: #000;
+}
+
+/*Main*/
+
+.principal-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5%;
 }
 
 .principal {
-    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-self: center;
+    gap: 6rem;
 }
 
 .container-texto {
     display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: space-evenly;
-    margin: 40px;
-    padding-left: 30px;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    box-shadow: 1px 1px 1px 1px var(--gray-100);
+    border-radius: 10px;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 1.8rem;
     line-height: 150%;
-    color: #0A3871;
-    width: 600px;
+    color: var(--dark-blue-400);
+    width: 400px;
+    height: 200px;
     overflow-wrap: break-word;  
     word-wrap: break-word; 
     word-break: break-word;
 }
 
 .texto {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
+    font-size: 1.8rem;
     line-height: 150%;
     text-align: center;
-    color: #0A3871;
+    padding: 0;
+    color: var(--dark-blue-400);
     background: none;
     border: none;
     resize: none;
@@ -58,91 +106,77 @@ body {
     outline: none;
 }
 
-.container-void {
-    width: 400px;
-    height: 600px;
-}
+::-webkit-input-placeholder {
+    color: var(--dark-blue-400);
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    color: var(--dark-blue-400);  
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    color: var(--dark-blue-400);  
+ }
+ 
+ :-ms-input-placeholder {  
+    color: var(--dark-blue-400);  
+ }
 
-.container-botoes {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 24px;
-    margin: 20px;
-    gap: 8px;
-}
-
-.container-mensagem-validacao {
+ .container-botoes {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px;
-    gap: 8px;
-    position: absolute;
-    width: 252px;
-    height: 18px;
-    left: 55px;
-    top: 50em;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 150%;
-    color: #495057;
-    opacity: 0.8;
+    margin: 2%;
+    gap: 20rem;
 }
 
-.criptografar {
-    background: #0A3871;
+ .criptografar {
+    background: var(--dark-blue-400);
+    font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
     border: none;
-    color: #fff;
+    color: var(--white);
     flex: none;
     order: 0;
     flex-grow: 0;
 }
+
 .criptografar:hover {
-    background: #D8DFE8;
-    color: #0A3871;
-    cursor: pointer;
-    box-shadow: 1px 1px 1px 1px #495057;
+    background: var(--light-blue-200);
     font-weight: bold;
+    color: var(--dark-blue-400);
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px var(--gray-200);
 }
 
 .descriptografar {
-    background: #D8DFE8;
+    background: var(--gray-100);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
     box-sizing: border-box;
-    width: 328px;
-    height: 67px;
+    width: 200px;
+    height: 50px;
     border: none;
-    color:  #0A3871;
-    border-radius: 24px;
+    color:  var(--dark-blue-400);
+    border-radius: 5px;
     flex: none;
     order: 1;
     flex-grow: 0;
 }
 
 .descriptografar:hover {
-    background: #495057;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 1px 1px 1px 1px #343A40;
+    background: var(--gray-400);
     font-weight: bold;
+    color: var(--white);
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px var(--gray-400);
 }
 
 .container-retangulo {
-    position: absolute;
-    width: 400px;
-    height: 1100px;
-    left: 930px;
-    top: -65px;
-    padding: 0 20px;
-    background: #fff;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -150,19 +184,20 @@ body {
     flex-wrap: wrap;
     font-family: 'Inter', sans-serif;
     font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
+    width: 400px;
+    height: 200px;
+    font-size: 1.8rem;
     line-height: 150%;
     text-align: center;
-    color: #0A3871;
+    color: var(--dark-blue-400);
     overflow-wrap: break-word;  
     word-wrap: break-word; 
     word-break: break-word;
 }
 
 .imagem-menino { 
-    width: 336px;
-    height: 304px;
+    width: 150px;
+    height: 150px;
 }
 
 .container-paragrafo {
@@ -173,20 +208,16 @@ body {
     gap: 16px;
     width: 336px;
     height: 122px;
-    left: 1032px;
-    top: 619px;
 }
 
 .paragrafo1 {
-    width: 336px;
-    height: 58px;
-    font-family: 'Inter';
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1rem;
     line-height: 120%;
     text-align: center;
-    color: #343A40;
+    color: var(--gray-500);
     flex: none;
     order: 0;
     align-self: stretch;
@@ -194,65 +225,56 @@ body {
 }
 
 .paragrafo2 {
-    width: 336px;
-    height: 48px;
-    font-family: 'Inter';
+    font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 0.8rem;
     line-height: 150%;
     text-align: center;
-    color: #495057;
+    color: var(--gray-400);
     flex: none;
     order: 1;
     align-self: stretch;
     flex-grow: 0;
 }
 
+.container-mensagem-validacao {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    padding: 1%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.9rem;
+    line-height: 150%;
+    color: var(--gray-400);
+    opacity: 0.8;
+}
+
+/*Footer*/
+
 .rodape {
-    width: 100%;
-    height: 100px;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+    background: linear-gradient(to bottom, var(--light-blue-200), var(--gray-100));
 }
 
-.rodape-paragrafo {
-    color: #495057;
-    text-align: left;
-    padding-top: 50px;
-    padding-left: 50px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 2px;
+.paragrafo-rodape {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--gray-400);
+    font-size: 1.3rem;
 }
 
-.rodape-paragrafo a {
+.link-rodape {
     text-decoration: none;
-    font-weight: 700;
-    color: #0A3871;
+    color: var(--dark-blue-400);
+    font-weight: bold;
 }
 
-.rodape-paragrafo a:hover {
+.link-rodape:hover {
+    color: var(--light-blue-400);
+    transition: 200ms all ease-in-out;
     cursor: pointer;
-    color: #609ED4;
-    transition: 300ms all ease-in-out;
 }
-
-::-webkit-input-placeholder {
-    color: #0A3871;
- }
- 
- :-moz-placeholder { /* Firefox 18- */
-    color: #0A3871;  
- }
- 
- ::-moz-placeholder {  /* Firefox 19+ */
-    color: #0A3871;  
- }
- 
- :-ms-input-placeholder {  
-    color: #0A3871;  
- }

@@ -4,43 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decodificador de Texto</title>
-    <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/x-icon">
+    <title>Decodificador/Codificador de Texto</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="cabecalho">
-       <img class="logo" src="assets/img/Logo.png" alt="logotipo Alura">
+        <a href="https://www.alura.com.br/?utm_source=bing&utm_medium=cpc&utm_campaign=institucional-brand&msclkid=61f2c26246cc10fdde92a1c50a2843bf" target="_blank" rel="external"><img class="logo-cabecalho-1" src="assets/img/alura.png" alt="logo Alura"></a>
+        <div class="divisor"></div>
+        <a href="https://www.oracle.com/br/education/oracle-next-education/" target="_blank" rel="external"><img class="logo-cabecalho-2" src="assets/img/one.png" alt="logo Oracle Next Education"></a>
     </header>
-    <main class="principal">
-        <section class="container-texto">
-            <textarea class="texto" placeholder="Digite seu texto" rows="5" cols="30" maxlength="100" wrap="hard"></textarea>
-        </section>
-        <div class="container-void">
-
+    <div class="container-mensagem-validacao">
+        <img src="assets/img/Exclamacao.svg" alt="exclamação"> 
+        <span>Apenas letras minúsculas e sem acento. Limite de 80 caracteres.</span>
+    </div>
+    <main class="principal-container">
+        <div class="principal">
+            <section class="container-texto">
+                <textarea class="texto" placeholder="Digite seu texto" rows="5" cols="30" maxlength="80" wrap="hard"></textarea>
+            </section>
+            <section class="container-texto">
+                <article class="container-retangulo">
+                    <div id="container-mensagem-erro">
+                        <img class="imagem-menino" src="assets/img/Vetor.png" alt="nenhuma mensagem encontrada">
+                        <div class="container-paragrafo">
+                            <p class="paragrafo1">Nenhuma mensagem encontrada</p>
+                            <p class="paragrafo2">Digite um texto que você deseja criptografar ou descriptografar</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
         </div>
-        <section class="container-botoes">
-            <div class="container-mensagem-validacao">
-                <img src="assets/img/Exclamacao.svg" alt="exclamação"> 
-                <span>Apenas letras minúsculas e sem acento. Limite de 100 caracteres.</span>
-            </div>
-            <button class="criptografar" type="submit" onclick="exibirCriptografia()">Criptografar</button>
-            <button class="descriptografar" type="submit" onclick="exibirTextoDescriptografado()">Descriptografar</button>
-        </section>
-        <aside class="container-retangulo">
-            <div id="container-mensagem-erro">
-                <img class="imagem-menino" src="assets/img/Vetor.png" alt="nenhuma mensagem encontrada">
-                <div class="container-paragrafo">
-                    <p class="paragrafo1">Nenhuma mensagem encontrada</p>
-                    <p class="paragrafo2">Digite um texto que você deseja criptografar ou descriptografar</p>
-                </div>
-            </div>
-        </aside>
+        <div class="container-botoes">
+            <button class="criptografar" type="button" onclick="exibirCriptografia()">Criptografar</button>
+            <button class="descriptografar" type="button" onclick="exibirTextoDescriptografado()">Descriptografar</button>
+        </div>
     </main>
     <footer class="rodape">
-        <p class="rodape-paragrafo">Desenvolvido por <a href="https://www.linkedin.com/in/ially-fabiane-dev/">Ially Fabiane</a></p>
+        <p class="paragrafo-rodape">Desenvolvido por <a class="link-rodape" href="https://www.linkedin.com/in/ially-fabiane-dev/" target="_blank" rel="external">Ially Fabiane</a></p>
     </footer>
     <script src="js/main.js"></script>
 </body>

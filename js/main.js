@@ -4,6 +4,7 @@ let containerRetangulo = document.querySelector(".container-retangulo");
 let botaoCriptografar = document.querySelector(".criptografar");
 let botaoDescriptografar = document.querySelector(".descriptografar");
 let mensagem =  document.querySelector(".container-mensagem-validacao");
+let botaoCopiar = document.querySelector(".botao-copiar");
 mensagem.style.visibility = "hidden";
 
 botaoCriptografar.addEventListener("click", function mensagemDeValidacao() {
@@ -12,7 +13,7 @@ botaoCriptografar.addEventListener("click", function mensagemDeValidacao() {
     }
     else if (/^[A-Z-a-z (áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ)]+$/.test(frase.value)) {
         mensagem.style.visibility = "visible";
-     };
+    };
 });
 
 botaoDescriptografar.addEventListener("click", function mensagemDeValidacao() {
@@ -68,3 +69,10 @@ function mostraMensagemDeErro (bool) {
    let mensagem =  document.getElementById("container-mensagem-erro");
    mensagem ? mensagem.style.display = "none" : "";
 };
+
+function copiarTexto(frase) {
+   frase.select();
+   document.execCommand("copy");
+   alert("Seu texto foi copiado para a área de transferência! Utilize CTRL+V para colar.")
+}
+

@@ -25,20 +25,16 @@
             <section class="container-texto">
                 <textarea class="texto" placeholder="Digite seu texto" rows="5" cols="30" maxlength="80" wrap="hard"></textarea>
             </section>
-            <section class="container-texto">
-                <article class="container-retangulo">
-                    <div id="container-mensagem-erro">
-                        <img class="imagem-menino" src="assets/img/Vetor.png" alt="nenhuma mensagem encontrada">
-                        <div class="container-paragrafo">
-                            <p class="paragrafo1">Nenhuma mensagem encontrada</p>
-                            <p class="paragrafo2">Digite um texto que você deseja criptografar ou descriptografar</p>
-                        </div>
-                    </div>
-                </article>
-            </section>
-        </div>
-        <div class="container-botoes">
             <button class="criptografar" type="button" onclick="exibirCriptografia()">Criptografar</button>
+            <article class="container-retangulo container-texto">
+                <div id="container-mensagem-erro">
+                    <img class="imagem-menino" src="assets/img/Vetor.png" alt="nenhuma mensagem encontrada">
+                    <div class="container-paragrafo">
+                        <p class="paragrafo1">Nenhuma mensagem encontrada</p>
+                        <p class="paragrafo2">Digite um texto que você deseja criptografar ou descriptografar</p>
+                    </div>
+                </div>
+            </article>
             <button class="descriptografar" type="button" onclick="exibirTextoDescriptografado()">Descriptografar</button>
         </div>
     </main>

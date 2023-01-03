@@ -77,18 +77,26 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin: 5%;
+    margin: 0 2% 5%;
 }
 
 .principal {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-self: center;
-    gap: 6rem;
+    display: grid;
+    grid-template-areas: 
+    "textarea retangulo"
+    "criptografar descriptografar"
+    ;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-content: center;
+    place-items: center;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    margin: 1em;
 }
 
 .container-texto {
+    grid-area: textarea;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,15 +149,8 @@
     color: var(--dark-blue-400);  
  }
 
- .container-botoes {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 2%;
-    gap: 20rem;
-}
-
- .criptografar {
+ .criptografar {  
+    grid-area: criptografar;
     background: var(--dark-blue-400);
     font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
@@ -159,9 +160,6 @@
     border-radius: 5px;
     border: none;
     color: var(--white);
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
 
 .criptografar:hover {
@@ -173,6 +171,7 @@
 }
 
 .descriptografar {
+    grid-area: descriptografar;
     background: var(--gray-100);
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
@@ -182,9 +181,6 @@
     border: none;
     color:  var(--dark-blue-400);
     border-radius: 5px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
 }
 
 .descriptografar:hover {
@@ -196,6 +192,7 @@
 }
 
 .container-retangulo {
+    grid-area: retangulo;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,19 +211,29 @@
     word-break: break-word;
 }
 
+#container-mensagem-erro {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 3px;
+}
+
 .imagem-menino { 
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: auto;
+    align-self: end;
 }
 
 .container-paragrafo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
-    gap: 16px;
-    width: 336px;
-    height: 122px;
+    padding: 0;
+    gap: 2px;
+    width: 300px;
+    height: 70px;
 }
 
 .paragrafo1 {
@@ -297,3 +304,46 @@
     cursor: pointer;
 }
 
+@media (max-width: 720px) {
+    .principal {
+        grid-template-areas: 
+        "textarea"
+        "criptografar"
+        "retangulo"
+        "descriptografar"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .container-texto {
+        width: 300px;
+        height: 300px;
+        font-size: 1.2rem;
+        padding-top: 0;
+    }
+
+    .container-retangulo {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .imagem-menino {
+        width: 120px;
+        height: 120px;
+    }
+
+    .container-paragrafo {
+        width: 200px;
+        height: 100px;
+    }
+
+    .container-mensagem-validacao {
+        font-family: 0.7rem;
+        margin: 1em 4em;
+    }
+   
+    .descriptografar {
+        margin: 2em;
+    }
+}
